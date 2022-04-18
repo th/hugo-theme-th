@@ -1,10 +1,17 @@
-body {
+html {
   box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
   font-family: sans-serif;
   font-size: large;
   line-height: 1.5;
   max-width: 80vw;
   margin: 0 auto;
+  hyphens: auto;
 }
 
 code {
@@ -99,17 +106,18 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-.articletags {
-    flex-basis: 50%;
-    flex-grow: 1;
-    text-align: right;
+.tags {
+    display: flex;
+    flex: 1 0 20%;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     margin: 0;
 }
 
-.articletag {
-    list-style: none;
+.tag {
     display: inline;
-    padding-left: 0.5rem;
+    list-style-type: none;
 }
 
 .dates {
@@ -157,6 +165,10 @@ ul {
     padding-top: 3rem;
 }
 
+#articlelist {
+    padding: 0;
+}
+
 #articlelist > li {
     list-style-type: none;
     align-content: space-between;
@@ -173,17 +185,6 @@ ul {
     margin: 0 0.5rem;
     flex: 1 0 5rem;
     margin-right: 1.5rem;
-}
-
-.articlelisttags {
-    font-size: medium;
-    flex: 1;
-    margin: 0;
-    text-align: right;
-}
-
-.articlelisttag {
-    display: inline;
 }
 
 a.favitem:before {
