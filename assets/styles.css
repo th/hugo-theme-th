@@ -175,7 +175,7 @@ ul {
 #articlelist > li > time {
     margin: 0 0.5rem;
     float: left;
-    min-width: 15%;
+    min-width: 25%;
     display: inline;
 }
 
