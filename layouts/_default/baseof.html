@@ -2,7 +2,7 @@
 <html lang="{{ $.Site.LanguageCode | default "en" }}">
   <head>
     <meta charset="utf-8">
-    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }}{{ end }}{{ end }}</title>
+    <title>{{ with .Params.Title }}{{ . }}{{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="data:image/png;base64,">
     {{ range .AlternativeOutputFormats -}}
