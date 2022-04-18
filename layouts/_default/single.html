@@ -1,0 +1,42 @@
+{{ define "main" }}
+  <article>
+    <header id="articleheader">
+      <h1 id="articletitle">
+        {{- .Title -}}
+      </h1>
+      <div class="meta">
+        <div class="dates">
+        {{- if .Date -}}
+          <time {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }} class="created">
+            {{- .Date.Format (default "2006-01-02" .Site.Params.date_format) -}}
+          </time>
+        {{- end -}}
+        {{- if ne .Params.lastmod .Date -}}
+          <p>, Update: </p>
+          <time {{ .Params.lastmod.Format (default "2006-01-02" site.Params.date_format) | safeHTMLAttr }} class="lastmod">
+            {{- .Params.lastmod.Format (default "2006-01-02" site.Params.date_format) -}}
+          </time>
+        {{- end -}}
+        </div>
+        <ul class="tags">
+          {{ range $i, $e := .Params.tags }}
+            {{- if $i -}}{{- end -}}
+            <li class="tag">
+             <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="noprint">
+               {{- $e -}}
+             </a>
+           </li>
+          {{ end }}
+        </ul>
+    </div>
+    </header>
+      {{- .Content -}}
+      {{- if .Params.vgwort -}}
+      <img src="https://vg07.met.vgwort.de/na/{{- .Params.vgwort -}}" width="1" height="1" alt="" loading="eager">
+      {{- end -}}
+  </article>
+{{ end }}
+
+{{ define "comment" }}
+<p>Kommentare gibt es hier nicht. Aber schreiben Sie mir doch eine Mail an <a href="mailto:t@2uo.de" class="noprint">t@2uo.de</a>!</p>
+{{ end }}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }}{{ end }}{{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="data:image/png;base64,">
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{- end -}}
+    {{ $style := resources.Get "styles.css" | minify | fingerprint  }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
+  </head>
+  <body>
+    <header id="siteheader">
+        <ul>
+            <li><a href="{{ .Site.BaseURL }}" class="noprint"><b>Home</b></a></li>
+            <li><a href="/thomas/" class="noprint">Thomas Hühn</a></li>
+            <li><a href="/datenschutzerklaerung/" class="noprint">Datenschutzerklärung</a></li>
+            <li><a href="/impressum/" class="noprint">Impressum</a></li>
+        </ul>
+    </header>
+    <main>
+    {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
+        {{ block "comment" . }}{{ end }}
+    </footer>
+  </body>
+</html>

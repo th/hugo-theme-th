@@ -1,0 +1,207 @@
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: large;
+  line-height: 1.5;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+code {
+	font-family: ui-monospace, monospace, monospace;
+}
+
+kbd, samp, pre {
+	font-family: ui-monospace, monospace, monospace;
+	margin: 3rem auto;
+	width: 80%;
+	padding: 0rem 1rem 1rem 1rem;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #e2e8f0; /* taken from Tailwind CSS: https://tailwindcss.com */
+	border-radius: .5rem;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* taken from Tailwind CSS: https://tailwindcss.com */
+	overflow-x: auto;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 1.5rem auto;
+	width: 80%;
+	text-align: left;
+	display: table;
+    table-layout: fixed;
+	padding: 1rem;
+}
+
+tbody > :nth-child(odd) {
+	background-color: #e2e5e9;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 5rem;
+}
+
+img {
+	max-width: 100%;
+    height: auto;
+}
+
+figure {
+	text-align: center;
+	display: table;
+    table-layout: fixed;
+	margin: 3rem auto;
+	width: auto;
+	padding: 1rem;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #e2e8f0; /* taken from Tailwind CSS: https://tailwindcss.com */
+	border-radius: .5rem;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* taken from Tailwind CSS: https://tailwindcss.com */
+}
+
+figcaption {
+	text-align: left;
+}
+
+blockquote {
+	padding: 0 1rem;
+	margin: 3rem auto;
+	width: 80%;
+	border-left: 4px solid darkslategray;
+}
+
+blockquote > p {
+	margin-top: 0;
+}
+
+header {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+    border-top: 1px solid lightgray;
+    font-size: small;
+    margin-top: 2rem;
+    clear: both;
+}
+
+.meta {
+    display: flex;
+    align-content: space-between;
+    font-size: medium;
+    margin-bottom: 0.5rem;
+}
+
+.tags {
+    flex-basis: 50%;
+    flex-grow: 1;
+    text-align: right;
+    margin: 0;
+}
+
+.tag {
+    list-style: none;
+    display: inline;
+    padding-left: 0.5rem;
+}
+
+.dates {
+    text-align: left;
+}
+
+.dates p, .dates time {
+    display: inline;
+    margin: 0;
+}
+
+aside {
+	padding: 1rem;
+	margin: 3rem auto;
+	width: 80%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #e2e8f0; /* taken from Tailwind CSS: https://tailwindcss.com */
+	border-radius: .5rem;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* taken from Tailwind CSS: https://tailwindcss.com */
+}
+
+ul {
+	list-style-type: disc;
+}
+
+#siteheader {
+    text-align: right;
+    border-bottom: 1px solid lightgray;
+}
+
+#siteheader li {
+    list-style: none;
+    display: inline;
+    padding-left: 1rem;
+    font-size: small;
+}
+
+#articleheader {
+    border-bottom: 1px solid lightgray;
+}
+
+.year {
+    clear: both;
+    padding-top: 3rem;
+}
+
+#articlelist li {
+    list-style-type: none;
+    align-content: space-between;
+    clear: both;
+    padding-top: 1rem;
+}
+
+#articlelist > li > a {
+    margin: 0 0.5rem;
+    float: left;
+    min-width: 40%;
+    display: inline;
+
+}
+
+#articlelist > li > time {
+    margin: 0 0.5rem;
+    float: left;
+    min-width: 15%;
+    display: inline;
+}
+
+#articlelist .tags {
+    margin: 0 0.5rem;
+    font-size: medium;
+    float: right;
+    min-width: 20%;
+    display: inline;
+}
+
+a.favitem:before {
+	content: "★";
+    text-align: center;
+    color: black;
+    display: inline-block;
+	width: 1.5rem;
+    margin-left: -1.5rem;
+}
+
+@media print {
+	a:after {
+		content: " [🔗"attr(href)"]";
+	}
+    
+    a.noprint:after {
+		content: "";
+	}
+}
