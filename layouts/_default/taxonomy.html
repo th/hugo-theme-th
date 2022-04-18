@@ -11,10 +11,10 @@
         {{- end -}}
     </time>
     <a href="{{ .Permalink }}"{{- if .Params.favorite }} class="favitem" {{- end -}}>{{ .Title }}</a>
-    <ul class="tags">
+    <ul class="articlelisttags">
       {{ range $i, $e := .Params.tags }}
         {{- if $i -}}{{- end -}}
-        <li class="tag">
+        <li class="articlelisttag">
          <a href="{{- "/tags/" | relLangURL -}}{{- . | urlize -}}" class="noprint">
            {{- $e -}}
          </a>

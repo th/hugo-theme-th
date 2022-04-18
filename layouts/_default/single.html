@@ -18,10 +18,10 @@
           </time>
         {{- end -}}
         </div>
-        <ul class="tags">
+        <ul class="articletags">
           {{ range $i, $e := .Params.tags }}
             {{- if $i -}}{{- end -}}
-            <li class="tag">
+            <li class="articletag">
              <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="noprint">
                {{- $e -}}
              </a>
