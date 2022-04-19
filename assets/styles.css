@@ -11,7 +11,6 @@ body {
   line-height: 1.5;
   max-width: 80vw;
   margin: 0 auto;
-  hyphens: auto;
 }
 
 code {
@@ -108,7 +107,7 @@ footer {
 
 .tags {
     display: flex;
-    flex: 1 0 20%;
+    flex: 1 1 30%;
     gap: 0.5rem;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -118,6 +117,7 @@ footer {
 .tag {
     display: inline;
     list-style-type: none;
+    font-size: medium;
 }
 
 .dates {
@@ -174,17 +174,19 @@ ul {
     align-content: space-between;
     padding-top: 1rem;
     display: flex;
+    flex-wrap: wrap;
 }
 
 #articlelist > li > a {
     margin: 0 0.5rem;
-    flex: 3;
+    flex: 3 0 40%;
 }
 
 #articlelist > li > time {
     margin: 0 0.5rem;
-    flex: 1 0 5rem;
+    flex: 1 0 15%;
     margin-right: 1.5rem;
+    font-size: medium;
 }
 
 a.favitem:before {
