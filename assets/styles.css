@@ -154,6 +154,7 @@ ul {
     display: inline;
     padding-left: 1rem;
     font-size: small;
+    white-space: nowrap;
 }
 
 #articleheader {
