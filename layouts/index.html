@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ range (where .Site.RegularPages.ByDate.Reverse "Section" "post").GroupByDate "2006" }}
     <h1 class="year">{{ .Key }}</h1>
-    <ul id="articlelist">
+    <ul class="articlelist">
         {{ range .Pages }}
         <li>
             <a href="{{ .Permalink }}"{{- if .Params.favorite }} class="favitem" {{- end -}}>{{ .Title }}</a>

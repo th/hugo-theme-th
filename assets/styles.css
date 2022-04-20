@@ -177,11 +177,11 @@ ul {
     padding-top: 3rem;
 }
 
-#articlelist {
+.articlelist {
     padding: 0;
 }
 
-#articlelist > li {
+.articlelist > li {
     list-style-type: none;
     align-content: space-between;
     padding-top: 1rem;
@@ -189,7 +189,7 @@ ul {
     flex-direction: column;
 }
 
-#articlelist > li > a {
+.articlelist > li > a {
     flex: 3;
 }
 

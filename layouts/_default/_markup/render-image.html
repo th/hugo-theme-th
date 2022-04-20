@@ -1,14 +1,11 @@
-{{ $width := 0 }}
-{{ $height := 0 }}
-
-{{ $path := add "content/" (add .Page.File.Dir (.Destination | safeURL)) }}
-
-{{ with (imageConfig $path) }}
-    {{ $width = .Width }}
-    {{ $height = .Height }}
-{{ end }}
-
-
+{{- $width := 0 -}}
+{{- $height := 0 -}}
+{{- $path := add "content/" (add .Page.File.Dir (.Destination | safeURL)) -}}
+{{- with (imageConfig $path) -}}
+    {{- $width = .Width -}}
+    {{- $height = .Height -}}
+{{- end -}}
+</p>
 <figure>
 <img
     src="{{ .Destination | safeURL }}"
@@ -18,5 +15,6 @@
     {{ if ne $height 0 }}height="{{ $height }}"{{ end }}
     {{ with .Title}}title="{{ . }}"{{ end }}
 />
-{{ if .Title }}<figcaption>{{.Title}}</figcaption>{{ end }}
+{{- if .Title -}}<figcaption>{{.Title}}</figcaption>{{- end -}}
 </figure>
+<p>
