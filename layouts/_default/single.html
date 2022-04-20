@@ -4,7 +4,7 @@
       <h1 id="articletitle">
         {{- .Title -}}
       </h1>
-      <div class="meta">
+      <div class="articlemeta">
         <div class="dates">
         {{- if .Date -}}
           <time {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }} class="created">

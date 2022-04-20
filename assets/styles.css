@@ -98,7 +98,7 @@ footer {
     clear: both;
 }
 
-.meta {
+.articlemeta {
     display: flex;
     align-content: space-between;
     font-size: medium;
@@ -174,18 +174,20 @@ ul {
     align-content: space-between;
     padding-top: 1rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 #articlelist > li > a {
-    margin: 0 0.5rem;
-    flex: 3 0 40%;
+    flex: 3;
 }
 
-#articlelist > li > time {
-    margin: 0 0.5rem;
-    flex: 1 0 15%;
-    margin-right: 1.5rem;
+.indexmeta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.indexmeta > time {
+    flex: 1;
     font-size: medium;
 }
 
