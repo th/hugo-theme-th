@@ -5,6 +5,10 @@ html {
   box-sizing: inherit;
 }
 
+article {
+    hyphens: auto;
+}
+
 body {
   font-family: sans-serif;
   font-size: large;

@@ -12,7 +12,7 @@
           </time>
         {{- end -}}
         {{- if ne .Params.lastmod .Date -}}
-          <p>, Update: </p>
+          <p>, Update:&nbsp;</p>
           <time {{ .Params.lastmod.Format (default "2006-01-02" site.Params.date_format) | safeHTMLAttr }} class="lastmod">
             {{- .Params.lastmod.Format (default "2006-01-02" site.Params.date_format) -}}
           </time>
