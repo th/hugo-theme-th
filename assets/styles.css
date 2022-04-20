@@ -104,6 +104,7 @@ footer {
 
 .articlemeta {
     display: flex;
+    flex-wrap: wrap;
     align-content: space-between;
     font-size: medium;
     margin-bottom: 0.5rem;
@@ -153,10 +154,17 @@ ul {
     border-bottom: 1px solid lightgray;
 }
 
+#siteheader ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding: 0;
+}
+
 #siteheader li {
+    flex: 1;
     list-style: none;
-    display: inline;
-    padding-left: 1rem;
     font-size: small;
     white-space: nowrap;
 }
