@@ -112,7 +112,7 @@ footer {
 
 .tags {
     display: flex;
-    flex: 1 1 30%;
+    flex: 1 1 40%;
     gap: 0.5rem;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -127,6 +127,7 @@ footer {
 
 .dates {
     text-align: left;
+    flex: 1 1 50%;
 }
 
 .dates p, .dates time {

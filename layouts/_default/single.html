@@ -12,10 +12,11 @@
           </time>
         {{- end -}}
         {{- if ne .Params.lastmod .Date -}}
-          <p>, Update:&nbsp;</p>
-          <time {{ .Params.lastmod.Format (default "2006-01-02" site.Params.date_format) | safeHTMLAttr }} class="lastmod">
-            {{- .Params.lastmod.Format (default "2006-01-02" site.Params.date_format) -}}
-          </time>
+          <p>, Update:&nbsp;
+              <time {{ .Params.lastmod.Format (default "2006-01-02" site.Params.date_format) | safeHTMLAttr }} class="lastmod">
+                {{- .Params.lastmod.Format (default "2006-01-02" site.Params.date_format) -}}
+              </time>
+          </p>
         {{- end -}}
         </div>
         <ul class="tags">
