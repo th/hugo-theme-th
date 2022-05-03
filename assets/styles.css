@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  max-width: 95vw;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -15,6 +16,8 @@ body {
   line-height: 1.5;
   max-width: 80ch;
   margin: 0 auto;
+  padding-left: 2ch;
+  padding-right: 2ch;
 }
 
 code {
