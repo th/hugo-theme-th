@@ -11,7 +11,7 @@ article {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
   font-size: large;
   line-height: 1.5;
   max-width: 80ch;
@@ -21,11 +21,11 @@ body {
 }
 
 code {
-	font-family: ui-monospace, monospace, monospace;
+	font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 
 kbd, samp, pre {
-	font-family: ui-monospace, monospace, monospace;
+	font-family: font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 	margin: 3rem auto;
 	width: 80%;
 	padding: 0rem 1rem 1rem 1rem;
