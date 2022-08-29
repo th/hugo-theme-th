@@ -15,9 +15,9 @@
     <header id="siteheader">
         <ul>
             <li><a href="{{ .Site.BaseURL }}" class="noprint"><b>Home</b></a></li>
-            <li><a href="/thomas/" class="noprint">Thomas Hühn</a></li>
-            <li><a href="/datenschutzerklaerung/" class="noprint">Datenschutzerklärung</a></li>
-            <li><a href="/impressum/" class="noprint">Impressum</a></li>
+            {{ range sort (where (where .Site.Pages "Section" "page") "Params.header" true) "Params.headerweight" "asc" }}
+            <li><a href="{{.RelPermalink}}" class="noprint">{{.Title}}</a></li>
+            {{ end }}
         </ul>
     </header>
     <main>
