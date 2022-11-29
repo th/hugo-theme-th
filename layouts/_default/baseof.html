@@ -14,10 +14,11 @@
   <body>
     <header id="siteheader">
         <ul>
-            <li><a href="{{ .Site.BaseURL }}" class="noprint"><b>Home</b></a></li>
-            {{ range sort (where (where .Site.Pages "Section" "page") "Params.header" true) "Params.headerweight" "asc" }}
-            <li><a href="{{.RelPermalink}}" class="noprint">{{.Title}}</a></li>
-            {{ end }}
+        {{- range .Site.Params.links -}}
+          <li>
+              <a href="{{ .url }}">{{- .title -}}</a>
+          </li>
+        {{- end -}}
         </ul>
     </header>
     <main>
