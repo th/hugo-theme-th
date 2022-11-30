@@ -172,6 +172,10 @@ ul {
     white-space: nowrap;
 }
 
+#siteheader a {
+    padding: 10px 0;
+}
+
 #articleheader {
     border-bottom: 1px solid lightgray;
 }
