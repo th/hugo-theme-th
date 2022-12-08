@@ -20,6 +20,13 @@ body {
   padding-right: 2ch;
 }
 
+@media (prefers-color-scheme: dark) {
+		body {color: #fff;background: #000;}
+		a:link {color: #cdf;}
+		a:hover, a:visited:hover {color: #def;}
+		a:visited {color: #dcf;}
+	}
+
 code {
 	font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
