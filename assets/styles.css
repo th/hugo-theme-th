@@ -249,7 +249,7 @@ ul {
 #siteheader a::before {
     content: "";
     position: absolute;
-    bottom: -0.25rem;
+    bottom: -0.5rem;
     left: 0;
     right: 0;
     height: 2px;
