@@ -5,16 +5,12 @@
     {{- $width = .Width -}}
     {{- $height = .Height -}}
 {{- end -}}
-</p>
 <figure>
-<img
-    src="{{ .Destination | safeURL }}"
+<img src="data:image/jpeg;base64,{{ readFile $path | base64Encode }}"
     alt="{{ .Text }}"
-    loading="lazy"
     {{ if ne $width 0 }}width="{{ $width }}"{{ end }}
     {{ if ne $height 0 }}height="{{ $height }}"{{ end }}
     {{ with .Title}}title="{{ . }}"{{ end }}
 />
 {{- if .Title -}}<figcaption>{{.Title}}</figcaption>{{- end -}}
 </figure>
-<p>

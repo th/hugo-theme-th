@@ -1,0 +1,12 @@
+name = "hugo-theme-th"
+license = "All rights reserved."
+licenselink = "https://github.com/th/hugo-theme-th/blob/main/LICENSE"
+description = "A minimalist theme for Thomas Hühn's blogs with multi-language support"
+homepage = "https://github.com/th/hugo-theme-th"
+tags = ["blog", "minimal", "clean", "responsive", "multilingual"]
+features = ["dark-mode", "responsive", "rss", "tags"]
+min_version = "0.110.0"
+
+[author]
+  name = "Thomas Hühn"
+  homepage = "https://www.thomas-huehn.com"

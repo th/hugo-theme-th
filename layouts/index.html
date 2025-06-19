@@ -4,26 +4,30 @@
     <ul class="articlelist">
         {{ range .Pages }}
         <li>
-            <a href="{{ .Permalink }}"{{- if .Params.favorite }} class="favitem" {{- end -}}>{{ .Title }}</a>
-            <div class ="indexmeta">
+            <div class="article-header">
+                <div class="article-title">
+                    <a href="{{ .Permalink }}"{{- if .Params.favorite }} class="favitem" {{- end -}}>{{ .Title }}</a>
+                </div>
                 <time {{ printf `datetime="%s"` (.Date.Format "2006-01-02") | safeHTMLAttr }}>
                     {{- if eq .Site.LanguageCode "de" -}}
-                    {{ .Date.Format "02." }} {{ index .Site.Data.monate (printf "%d" .Date.Month) }}
-                    {{else}}
-                    {{ .Date.Format "January 2" }}
+                        {{ .Date.Format "2." }} {{ index .Site.Data.monate (printf "%d" .Date.Month) }}
+                    {{- else -}}
+                        {{ .Date.Format "January 2" }}
                     {{- end -}}
                 </time>
-                <ul class="tags">
-                  {{ range $i, $e := .Params.tags }}
-                    {{- if $i -}}{{- end -}}
-                    <li class="tag">
-                     <a href="{{- "/tags/" | relLangURL -}}{{- . | urlize -}}" class="noprint">
-                       {{- $e -}}
-                     </a>
-                   </li>
-                  {{ end }}
-                </ul>
             </div>
+            {{ if .Params.description }}
+            <div class="article-description">
+                {{ .Params.description }}
+            </div>
+            {{ end }}
+            {{ if .Params.tags }}
+            <div class="tags-small">
+              {{ range .Params.tags }}
+                <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag-small">{{ . }}</a>
+              {{ end }}
+            </div>
+            {{ end }}
         </li>
         {{ end }}
     </ul>
