@@ -41,11 +41,17 @@
     {{- end -}}
     {{- end -}}
     <meta property="article:author" content="Thomas Hühn">
+    {{- with .Params.featured_image -}}
+    <meta property="og:image" content="{{ . | absURL }}">
+    {{- end -}}
     
     {{- /* Twitter Card Meta Tags */ -}}
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="{{ if .Params.featured_image }}summary_large_image{{ else }}summary{{ end }}">
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Params.Title }}{{ end }}">
     <meta name="twitter:description" content="{{ $description }}">
+    {{- with .Params.featured_image -}}
+    <meta name="twitter:image" content="{{ . | absURL }}">
+    {{- end -}}
     
     {{- /* Dublin Core Meta Tags */ -}}
     <meta name="DC.title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Params.Title }}{{ end }}">
