@@ -449,7 +449,7 @@ h5 {
 h6 {
     font-size: 1em;
     font-weight: normal;
-    text-transform: italic; /* Italic for distinction */
+    font-style: italic; /* Italic for distinction */
 }
 
 /* Tag styling */
