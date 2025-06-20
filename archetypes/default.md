@@ -2,9 +2,7 @@
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 description: ""
 date: {{ .Date }}
-tags:
-  - 
-aliases:
-  - 
+tags: []
+aliases: []
 featured_image: ""
 ---
