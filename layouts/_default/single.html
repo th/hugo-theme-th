@@ -37,5 +37,8 @@
 {{ end }}
 
 {{ define "comment" }}
-<p>Kommentare gibt es hier nicht. Aber schreiben Sie mir doch eine Mail an <a href="mailto:t@2uo.de" class="noprint">t@2uo.de</a>!</p>
+{{- if eq .Site.LanguageCode "de" -}}
+<p>Kommentare gibt es hier nicht. Aber schreiben Sie mir doch eine Mail an <a href="mailto:t@2uo.de" class="noprint">t@2uo.de</a>!
+{{else}}
+<p>There are no comments here. But feel free to shoot an email to <a href="mailto:t@2uo.de" class="noprint">t@2uo.de</a>!</p>
 {{ end }}
