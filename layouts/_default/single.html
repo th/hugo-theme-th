@@ -11,8 +11,8 @@
             {{- .Date.Format (default "2006-01-02" .Site.Params.date_format) -}}
           </time>
         {{- end -}}
-        {{- if ne .Params.lastmod .Date -}}
-          <p>, Update:&nbsp;
+        {{- if and .Params.lastmod (ne (.Params.lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) -}}
+          <p>, Update:
               <time {{ .Params.lastmod.Format (default "2006-01-02" site.Params.date_format) | safeHTMLAttr }} class="lastmod">
                 {{- .Params.lastmod.Format (default "2006-01-02" site.Params.date_format) -}}
               </time>
