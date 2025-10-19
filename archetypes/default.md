@@ -4,5 +4,4 @@ date: {{ .Date }}
 tags: []
 description: []
 aliases: []
-featured_image: ""
 ---
