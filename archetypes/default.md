@@ -4,4 +4,5 @@ date: {{ .Date }}
 tags: []
 description: []
 aliases: []
+draft: true
 ---
