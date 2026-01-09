@@ -4,7 +4,32 @@
     <meta charset="utf-8">
     <title>{{ with .Params.Title }}{{ . }}{{ end }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ with .Description }}
+    <meta name="description" content="{{ . }}">
+    {{ end }}
     <link rel="icon" type="image/png" href="data:image/png;base64,">
+
+    {{/* Open Graph */}}
+    <meta property="og:title" content="{{ .Title }}">
+    {{ with .Description }}
+    <meta property="og:description" content="{{ . }}">
+    {{ end }}
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ with .Params.image }}
+    <meta property="og:image" content="{{ . | absURL }}">
+    {{ end }}
+
+    {{/* Twitter Card */}}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ .Title }}">
+    {{ with .Description }}
+    <meta name="twitter:description" content="{{ . }}">
+    {{ end }}
+    {{ with .Params.image }}
+    <meta name="twitter:image" content="{{ . | absURL }}">
+    {{ end }}
+
     {{ range .AlternativeOutputFormats -}}
         {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{- end -}}
