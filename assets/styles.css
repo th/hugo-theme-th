@@ -116,6 +116,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
+    align-items: baseline;
+    justify-content: space-between;
     font-size: medium;
     margin-bottom: 0.5rem;
 }
@@ -127,12 +129,31 @@ footer {
     flex-wrap: wrap;
     justify-content: flex-end;
     margin: 0;
+    padding: 0;
 }
 
 .tag {
     display: inline;
     list-style-type: none;
-    font-size: medium;
+}
+
+.tag a {
+    display: inline-block;
+    padding: 0 0.5rem;
+    background-color: #e8e8e8;
+    color: #666;
+    text-decoration: none;
+    border-radius: 0.75rem;
+    font-size: small;
+    line-height: 1.6;
+}
+
+.tag a:hover {
+    background-color: #d0d0d0;
+}
+
+.articlemeta .tags {
+    justify-content: flex-end;
 }
 
 .dates {
@@ -199,23 +220,35 @@ ul {
 .articlelist > li {
     list-style-type: none;
     align-content: space-between;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     display: flex;
     flex-direction: column;
 }
 
 .articlelist > li > a {
-    flex: 3;
+    display: block;
+    hyphens: auto;
+}
+
+.post-description {
+    margin: 0.25rem 0 0.5rem 0;
+    font-size: small;
+    color: #666;
+    line-height: 1.4;
 }
 
 .indexmeta {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .indexmeta > time {
     flex: 1;
-    font-size: medium;
+    font-size: small;
+    white-space: nowrap;
+    color: #666;
+    line-height: 1.6;
 }
 
 a.favitem:before {

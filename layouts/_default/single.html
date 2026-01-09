@@ -21,10 +21,10 @@
         </div>
 	<ul class="tags">
 	  {{ with .Params.tags }}
-	    {{ range $i, $e := sort . }}
+	    {{ range sort . }}
 	      <li class="tag">
 	        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="noprint">
-	          {{ $e }}
+	          {{ . }}
 	        </a>
 	      </li>
 	    {{ end }}

@@ -6,7 +6,7 @@
     {{- $height = .Height -}}
 {{- end -}}
 <figure>
-<img src="data:image/jpeg;base64,{{ readFile $path | base64Encode }}"
+<img src="{{ .Destination | safeURL }}"
     alt="{{ .Text }}"
     {{ if ne $width 0 }}width="{{ $width }}"{{ end }}
     {{ if ne $height 0 }}height="{{ $height }}"{{ end }}
