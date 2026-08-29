@@ -12,7 +12,7 @@
             <div class ="indexmeta">
                 <time {{ printf `datetime="%s"` (.Date.Format "2006-01-02") | safeHTMLAttr }}>
                     {{- if eq .Site.LanguageCode "de" -}}
-                    {{ .Date.Format "02." }} {{ index .Site.Data.monate (printf "%d" .Date.Month) }}
+                    {{ .Date.Format "02." }} {{ index hugo.Data.monate (printf "%d" .Date.Month) }}
                     {{else}}
                     {{ .Date.Format "January 2" }}
                     {{- end -}}
