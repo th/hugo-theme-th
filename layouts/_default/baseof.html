@@ -35,6 +35,7 @@
     {{- end -}}
     {{ $style := resources.Get "styles.css" | minify | fingerprint  }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
+    <link rel="canonical" href="{{ .Permalink }}" />
   </head>
   <body>
     <header id="siteheader">
